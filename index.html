@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <section style="height:100%; width: 100%; box-sizing: border-box; background-color: rgb(176, 196, 222)">
+</section>
+
+ <script src="assets/function.js"></script>
+<!-- navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">3D Kalkulator</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#tabung">Silinder</a>
+        <a class="nav-link" href="#kerucut">Kerucut</a>
+        <a class="nav-link" href="#bola">Bola</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- jumbortron -->
+<section class="jumbotron">
+  <h1 class="display-4">3D Kalkulator</h1>
+  <h4 class="lead">Selamat datang di perhitungan luas bangun ruang</h4>
+  <h5 class="lead">Kami menyediakan fiture perhitungan luas bangun ruang silinder, kerucut, dan bola.</h5>
+  <h4 id="nama"></h4>
+</section>
+<div id="tabung" class="row-padding">
+              <h2><strong> Silinder </strong> </h2>
+              <p>Rumus luas permukaan silinder: 2 x π x r (r + t)<br>Rumus volume silinder: π x r x r x </p>
+              <div class="frame">
+                <div class="form-group">
+                  <input id="masukan_jari1" name="masukan_jari1" required />
+                  <label for="masukan_jari1">Masukan jari-jari silinder(dalam meter)</label>
+                </div>
+                <div class="form-group">
+                  <input id="masukan_tinggi1" name="masukan_tinggi1" required />
+                  <label for="masukan_tinggi1">Masukan tinggi silinder(dalam meter)</label>
+                </div>
+                <button id="hasil1" class="btn btn1" onclick="tabung1()">Hitung!</button>
+                <br><br>
+                <div class="form-group">
+                  <textarea id="result1" type="hidden" ></textarea>
+                  <label>Result Hitungan</label>
+                </div>
+      
+              </div>
+            </div>
+            <div id="kerucut" class="row-padding">
+              <h2><strong> Kerucut </strong> </h2>
+              <p>Rumus luas permukaan kerucut: π.r2 + π.r.s<br>Rumus volume kerucut: 1/3·π·r2·t</p>
+              <div class="frame">
+                <div class="form-group">
+                  <input id="masukan_jari2" name="masukan_jari2" required />
+                  <label for="masukan_jari2">Masukan jari-jari kerucut(dalam meter)</label>
+                </div>
+                <div class="form-group">
+                  <input id="masukan_garis" name="masukan_garis" required />
+                  <label for="masukan_garis">Masukan garis pelukis kerucut(dalam meter)</label>
+                </div>
+                <div class="form-group">
+                  <input id="masukan_tinggi2" name="masukan_tinggi2" required />
+                  <label for="masukan_tinggi2">Masukan tinggi kerucut(dalam meter)</label>
+                </div>
+                <button id="hasil2" class="btn btn1" onclick="kerucut1()">Hitung!</button>
+                <br><br>
+                <div class="form-group">
+                  <textarea id="result2" type="hidden" ></textarea>
+                  <label>Result Hitungan</label>
+                </div>
+              </div>
+            </div>
+            <div id="bola" class="row-padding">
+              <h2><strong> Bola </strong> </h2>
+              <p>Rumus luas permukaan bola: 4.π.r2<br>Rumus volume bola: 4/3 × π × r³</p>
+              <div class="frame">
+                <div class="form-group">
+                  <input id="radius" name="radius" required />
+                  <label for="radius">Masukan jari-jari silinder(dalam meter)</label>
+                </div>
+                <button id="hasil3" class="btn btn1" onclick="bola()"> Hitung! </button>
+                <br><br>
+                <div class="form-group">
+                  <textarea id="result3" type="hidden" ></textarea>
+                  <label>Result Hitungan</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- footer -->
+<footer class="fixed-bottom bg-dark" style="height: 40px;">
+      <div class="container">
+        <div class="row">
+          <div class="social-media col text-center">
+            <a href="https://www.youtube.com/channel/UCXyripbH7gWF-ver4fHIjcg"><i class="fa fa-youtube">Youtube</i></a>
+            <a href="https://www.instagram.com/kintankh/"><i class="fa fa-instagram">Instagram</i></a>
+            <a href="https://github.com/kintankh"><i class="fa fa-github">Github</i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      nama();
+      function nama(){
+          var text;
+          orang = prompt("Masukan Nama Anda:", "Nama kamu....");
+          var saatini = new Date();
+          var jam = saatini.getHours();
+          if(orang == "" ||  orang.search("[!A-Z.a-z]")){
+          alert("Inputan yang anda masukan salah");
+          nama();
+          }
+          if (orang != null || jam >= 12) {
+              if (jam >= 0 && jam < 12) {
+                  text = "Hello " + orang + " Selamat Pagi.";}
+              if (jam >= 12 && jam < 18) {
+                  text = "Hello " + orang + " Selamat Siang."; }
+              if (jam >= 18) {
+                  text = "Hello " + orang + " Selamat malam."; }
+          } 
+          else {
+          text = "User cancelled the prompt.";
+          }
+            document.getElementById("nama").innerHTML = text;
+          }
+    </script>
+    <script type="text/javascript">
+      // menghitung tabung
+  var tabung1 = function () {
+    let jari_jari = document.getElementById('masukan_jari1').value
+    let tinggi = document.getElementById('masukan_tinggi1').value
+    var z = 2 * Math.PI * Math.pow(jari_jari, 2) + 2 * Math.PI * jari_jari * tinggi;
+    var y = Math.PI * Math.pow(jari_jari, 2) * tinggi;
+    if (jari_jari == "" || tinggi == "") {
+        alert("Inputan masih kosong");
+    } else {
+        if (isNaN(jari_jari) || isNaN(tinggi)) {
+            alert("Inputan harus angka");
+            document.getElementById('masukan_jari1').value = '';
+            document.getElementById('masukan_tinggi1').value = '';
+        } else {
+            // display the result
+            document.getElementById('result1').textContent = "Luas permukaan = " + z.toFixed(2) + " m"+"2"  + "\nVolume = " + y.toFixed(2) + " m"+"3";
+        }
+    }
+ }
+ //menghitung kerucut
+ var kerucut1 = function () {
+    // get the radius
+    let jari = document.getElementById('masukan_jari2').value
+    let kamu = document.getElementById('masukan_garis').value
+    let tinggi1 = document.getElementById('masukan_tinggi2').value
+    var a = Math.PI * Math.pow(jari, 2) + Math.PI * jari * kamu;
+    var d = (1 / 3) * Math.PI * Math.pow(jari, 2) * tinggi1;
+    if (jari == "" || tinggi1 == "" || kamu == "") {
+        alert("Inputan masih kosong");
+    } 
+    else {
+        if (isNaN(jari) || isNaN(tinggi1) || isNaN(kamu)) {
+            alert("Inputan harus angka");
+            document.getElementById('masukan_jari2').value = '';
+            document.getElementById('masukan_tinggi2').value = '';
+            document.getElementById('masukan_garis').value = '';
+        } 
+        else {
+        // display the result
+            document.getElementById('result2').textContent = "Luas permukaan = " + a.toFixed(2) + " m"+"2" + "\nVolume = " + d.toFixed(2) + " m"+"3" ;
+        }
+    }
+ }
+ // menghitung bola
+ var bola = function () {
+    // get the radius
+    let radius = document.getElementById('radius').value
+    var b = 4 * Math.PI * Math.pow(radius, 2);
+    var c = (4 / 3) * Math.PI * Math.pow(radius, 3);
+    if (radius == "") {
+        alert("Inputan masih kosong");
+    } 
+    else {
+        if (isNaN(radius)) {
+            alert("Inputan harus angka");
+            document.getElementById('radius').value = "";
+        } 
+        else {
+        // display the result
+            document.getElementById('result3').textContent = "Luas permukaan = " + b.toFixed(2) + " m"+"2"  + "\nVolume = " + c.toFixed(2) + " m"+"3";
+        }
+    }
+}
+    </script>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="assets/function.js" type="text/javascript"></script>
+    
+  </body>
+</html>
